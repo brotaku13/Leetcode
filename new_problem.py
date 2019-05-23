@@ -14,6 +14,10 @@ def get_arg(arg):
         return None
 
 def main():
+    """
+    Usage:
+        python new_problem.py [-n problem number] [-t problem title] 
+    """
     # get number
     # -n - problem number
     problem_num = get_arg('-n')
