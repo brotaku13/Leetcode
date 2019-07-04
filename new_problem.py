@@ -34,7 +34,7 @@ def main():
     name = f'{problem_num}_{title}'
     p = Path(name)
     p.mkdir()
-    for t in ['C++', 'Python', 'Go']:
+    for t in ['C++', 'Python']:
         pp = p / t
         pp.mkdir()
 
