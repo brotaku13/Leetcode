@@ -41,7 +41,26 @@ def palindrome_permutation_counts(s):
         return True
 
 def palindrome_permutation_bitvector(s):
+    # create array of letter counts
+    vector = [0] * 256
+    for letter in s:
+        vector[ord(letter)] += 1
     
+    if len(s) % 2 == 1:
+        # odd
+        num_odd = 0
+        for num in vector:
+            if num % 2 == 1:
+                num_odd += 1
+                if num_odd > 1:
+                    return False
+        return True
+    else:
+        # even
+        for num in vector:
+            if num % 2 == 1:
+                return False
+        return True
 
 def main():
     for t in tests:
