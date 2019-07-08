@@ -25,4 +25,3 @@ def get_start(head):
         fast = fast.next
     
     return slow
-
